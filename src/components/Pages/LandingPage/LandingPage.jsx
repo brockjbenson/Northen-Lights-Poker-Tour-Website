@@ -19,7 +19,6 @@ function LandingPage() {
     <div className="home-container">
       <Nav />
       <section>Hello</section>
-      <Footer />
     </div>
   );
 }

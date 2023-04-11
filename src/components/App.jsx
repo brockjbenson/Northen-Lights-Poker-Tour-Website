@@ -20,6 +20,8 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 
 import "./App.css";
+import MembersPage from "./Pages/MembersPage/MembersPage";
+import StatsPage from "./Pages/StatsPage/StatsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +39,14 @@ function App() {
 
         <Route exact path="/about">
           <AboutPage />
+        </Route>
+
+        <Route exact path="/members">
+          <MembersPage />
+        </Route>
+
+        <Route exact path="/stats">
+          <StatsPage />
         </Route>
 
         <ProtectedRoute exact path="/user">

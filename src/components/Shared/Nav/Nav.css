@@ -16,7 +16,7 @@
   padding: 0.5rem 2rem;
   font-size: 2rem;
   border-radius: 2rem;
-  font-weight: 400;
+  font-weight: 500;
   transition: 300ms;
 }
 
@@ -26,7 +26,7 @@
   padding: 0.5rem 2rem;
   font-size: 2rem;
   border-radius: 2rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav-links {
@@ -39,7 +39,7 @@
   margin-inline: 1.5rem;
   color: var(--clr-primary);
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 .nav-left,
 .nav-right {
@@ -75,7 +75,7 @@
 
 .nav-title {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--clr-primary);
   margin: 0;
 }
