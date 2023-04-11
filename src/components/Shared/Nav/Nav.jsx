@@ -1,44 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import LogOutButton from '../LogOutButton/LogOutButton';
-import './Nav.css';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { Link } from "react-router-dom";
+import LogOutButton from "../LogOutButton/LogOutButton";
+import "./Nav.css";
+import { useSelector } from "react-redux";
+import { FaUserCircle } from "react-icons/fa";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Nav() {
   const user = useSelector((store) => store.user);
+  const history = useHistory();
+
+  const sendToLogin = () => {
+    history.push("/login");
+  };
 
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">Prime Solo Project</h2>
+        <h2 className="nav-title">NLPT</h2>
       </Link>
-      <div>
-        {/* If no user is logged in, show these links */}
+
+      <div className="nav-links">
+        <Link className="navLink" to="/home">
+          Home
+        </Link>
         {!user.id && (
-          // If there's no user, show login/registration links
-          <Link className="navLink" to="/login">
-            Login / Register
-          </Link>
+          <button className="nav-login-btn" onClick={sendToLogin}>
+            Login
+          </button>
         )}
 
-        {/* If a user is logged in, show these links */}
         {user.id && (
           <>
-            <Link className="navLink" to="/user">
-              Home
-            </Link>
-
             <Link className="navLink" to="/info">
               Info Page
             </Link>
 
-            <LogOutButton className="navLink" />
+            <Link className="navLink" to="/user">
+              <FaUserCircle className="nav-user-icon" />
+            </Link>
           </>
         )}
-
-        <Link className="navLink" to="/about">
-          About
-        </Link>
       </div>
     </div>
   );
