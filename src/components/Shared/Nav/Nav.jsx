@@ -16,30 +16,30 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
-        <h2 className="nav-title">NLPT</h2>
-      </Link>
-
-      <div className="nav-links">
-        <Link className="navLink" to="/home">
-          Home
+      <div className="nav-left">
+        <Link to="/home">
+          <h2 className="nav-title">NLPT</h2>
         </Link>
-        {!user.id && (
-          <button className="nav-login-btn" onClick={sendToLogin}>
-            Login
-          </button>
-        )}
+      </div>
 
-        {user.id && (
-          <>
-            <Link className="navLink" to="/info">
-              Info Page
-            </Link>
+      <div className="nav-middle">
+        <Link className="navLink" to="/home">
+          HOME
+        </Link>
 
-            <Link className="navLink" to="/user">
-              <FaUserCircle className="nav-user-icon" />
-            </Link>
-          </>
+        <Link className="navLink" to="/about">
+          ABOUT
+        </Link>
+      </div>
+      <div className="nav-right">
+        {!user.id ? (
+          <Link className="login-link" to="/login">
+            LOGIN
+          </Link>
+        ) : (
+          <Link className="navLink" to="/user">
+            <FaUserCircle className="nav-user-icon" />
+          </Link>
         )}
       </div>
     </div>
