@@ -8,13 +8,8 @@ function LandingPage() {
   const history = useHistory();
 
   return (
-    <div className="bg-landingImg h-screen">
+    <div className="bg-landingImg h-screen bg-no-repeat bg-auto bg-center">
       <Nav />
-      <section className="hero-section">
-        <header>
-          <h1>Welcome to, Northern Lights Poker Tour</h1>
-        </header>
-      </section>
     </div>
   );
 }
