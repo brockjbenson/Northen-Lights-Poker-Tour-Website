@@ -1,42 +1,85 @@
+
+
 .nav {
   /* flex box layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 15rem;
 
-  margin: 0 0 30px;
-  background-color: #00acb0;
   overflow: hidden;
+}
+
+.login-link {
+  color: white;
+  background-color: var(--clr-primary);
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: 300ms;
+}
+
+.login-link:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-primary-light);
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navLink {
+  margin-inline: 1.5rem;
+  color: var(--clr-primary);
+  font-size: 2rem;
+  font-weight: 500;
+}
+.nav-left,
+.nav-right {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.nav-middle {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
 }
 
 .nav a {
   text-decoration: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+}
+
+.nav-user-icon {
+  width: 3rem;
+  height: 3rem;
+  color: white;
 }
 
 .nav-title {
-  font-size: 24px;
+  font-size: 4rem;
   font-weight: 700;
-  color: #f2f2f2;
-  padding-left: 10px;
+  color: var(--clr-primary);
   margin: 0;
 }
 
-.navLink {
-  display: inline-block;
-  color: #f2f2f2;
-  background-color: #00acb0;
-  text-align: center;
-  padding: 24px 10px;
-  text-decoration: none;
-  font-size: 15px;
 
-  /* these last two make the logout button in
-  the nav bar look like another link */
-  border: none;
-  cursor: pointer;
-  outline: 0;
-}
 
-.navLink:hover {
-  background-color: #008183;
-}
+
