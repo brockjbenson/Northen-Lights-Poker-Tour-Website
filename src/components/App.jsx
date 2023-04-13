@@ -1,23 +1,14 @@
 import React, { useEffect } from "react";
-import {
-  HashRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
 import Nav from "./Shared/Nav/Nav";
 import Footer from "./Shared/Footer/Footer";
 
-import ProtectedRoute from "./Shared/ProtectedRoute/ProtectedRoute";
-
 import AboutPage from "./Pages/AboutPage/AboutPage";
-import UserPage from "./Pages/UserPage/UserPage";
+
 import LandingPage from "./Pages/LandingPage/LandingPage";
-import LoginPage from "./Pages/LoginPage/LoginPage";
-import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 
 import "./App.css";
 import MembersPage from "./Pages/MembersPage/MembersPage";
@@ -35,8 +26,6 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Redirect exact from="/" to="/home" />
-
         <Route exact path="/about">
           <AboutPage />
         </Route>
@@ -49,23 +38,8 @@ function App() {
           <StatsPage />
         </Route>
 
-        <ProtectedRoute exact path="/user">
-          <UserPage />
-        </ProtectedRoute>
-
-        <Route exact path="/login">
-          {user.id ? <Redirect to="/user" /> : <LoginPage />}
-        </Route>
-
-        <Route exact path="/registration">
-          {user.id ? <Redirect to="/user" /> : <RegisterPage />}
-        </Route>
-
         <Route exact path="/home">
-          {user.id ? <Redirect to="/user" /> : <LandingPage />}
-        </Route>
-        <Route>
-          <h1>404</h1>
+          <LandingPage />
         </Route>
       </Switch>
     </Router>
