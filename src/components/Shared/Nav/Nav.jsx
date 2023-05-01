@@ -19,11 +19,19 @@ function Nav() {
         </h1>
         <img src={"/images/logo.png"} alt="" className=" w-12" />
       </header>
-      <ul className="hidden md:uppercase md:flex text-blue-950 text-lg font-normal items-center">
-        <li className="px-4">Home</li>
-        <li className="px-4">Members</li>
-        <li className="px-4">Stats</li>
-        <li className="px-4">About</li>
+      <ul className="hidden md:uppercase md:flex cursor-pointer text-blue-950 text-lg font-normal items-center">
+        <li className="px-4 hover:bg-blue-950 hover:text-white rounded-xl transition duration-300">
+          Home
+        </li>
+        <li className="px-4 hover:bg-blue-950 hover:text-white rounded-xl transition duration-300">
+          Members
+        </li>
+        <li className="px-4 hover:bg-blue-950 hover:text-white rounded-xl transition duration-300">
+          Stats
+        </li>
+        <li className="px-4 hover:bg-blue-950 hover:text-white rounded-xl transition duration-300">
+          About
+        </li>
       </ul>
       <div onClick={handleNav} className="flex items-center  md:hidden">
         {!nav && <GiHamburgerMenu size={20} />}
@@ -39,11 +47,11 @@ function Nav() {
           onClick={handleNav}
           className={nav ? "fixed top-9 right-4" : "fixed right-[-100%]"}
         >
-          <RxCross2 size={20} />
+          <RxCross2 size={20} className="bg-white rounded-xl cursor-pointer" />
         </div>
 
-        <ul className="pt-20 pl-4 text-right text-white md:hidden">
-          <li className="p-4">Home</li>
+        <ul className="pt-20 pl-4 text-right cursor-pointer text-white md:hidden">
+          <li className="p-4 hover:underline transition duration-300">Home</li>
           <li className="p-4">Members</li>
           <li className="p-4">Stats</li>
           <li className="p-4">About</li>
