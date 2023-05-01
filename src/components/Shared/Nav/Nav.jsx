@@ -25,7 +25,7 @@ function Nav() {
         <li className="px-4">Stats</li>
         <li className="px-4">About</li>
       </ul>
-      <div onClick={handleNav} className="flex items-center">
+      <div onClick={handleNav} className="flex items-center  md:hidden">
         {!nav && <GiHamburgerMenu size={20} />}
       </div>
       <div
@@ -42,7 +42,7 @@ function Nav() {
           <RxCross2 size={20} />
         </div>
 
-        <ul className="pt-20 pl-4 text-right text-white">
+        <ul className="pt-20 pl-4 text-right text-white md:hidden">
           <li className="p-4">Home</li>
           <li className="p-4">Members</li>
           <li className="p-4">Stats</li>
