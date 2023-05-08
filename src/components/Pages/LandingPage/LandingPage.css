@@ -1,0 +1,27 @@
+.landing-message-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rem;
+  justify-content: center;
+  width: 50%;
+}
+
+.landing-message {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-get-started-button {
+  width: 10rem;
+  margin-top: 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding-block: 0.5rem;
+  color: white;
+  margin-inline: auto;
+  background-color: rgb(27, 27, 86);
+}
