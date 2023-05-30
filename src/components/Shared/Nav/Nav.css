@@ -1,0 +1,28 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.nav-logo-text {
+  margin-inline: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-link {
+  margin-inline: 1rem;
+  font-size: 1.25rem;
+}
