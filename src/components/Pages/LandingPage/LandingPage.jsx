@@ -9,7 +9,7 @@ function LandingPage() {
   const history = useHistory();
 
   return (
-    <div className="">
+    <div className="landing-main">
       <Nav />
       <div className="landing-message-container">
         <div className="landing-message">

@@ -13,6 +13,7 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import "./App.css";
 import MembersPage from "./Pages/MembersPage/MembersPage";
 import StatsPage from "./Pages/StatsPage/StatsPage";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Redirect exact from="/" to="/home" />
         <Route exact path="/about">
           <AboutPage />
         </Route>

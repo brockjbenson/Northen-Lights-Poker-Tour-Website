@@ -1,11 +1,21 @@
-.members-header {
+.member-page-container {
+  background: url("/public/images/home-bg.png");
+  height: 100svh;
+}
+
+.member-page-top {
+  width: 100vw;
+  padding-bottom: 15rem;
+}
+
+.members-list-header {
   margin-inline: auto;
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-block: 2rem;
 }
 
-.members-header h1 {
+.members-list-header h1 {
   font-size: 3rem;
   font-weight: bold;
   font-style: italic;
@@ -41,9 +51,22 @@
   margin-block: 1rem;
 }
 
-.member-name {
+.member-info-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.member-type {
+  font-weight: bold;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.member-name {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .member-name li {
@@ -55,4 +78,41 @@
   border-radius: 5%;
   width: 10rem;
   height: 10rem;
+}
+
+.member-page-title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.member-page-title-container {
+  margin-inline: auto;
+  margin-top: 10rem;
+  width: 50%;
+}
+
+.member-page-title-btn {
+  width: 10rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding-block: 0.5rem;
+  color: white;
+  margin-inline: auto;
+  background-color: rgb(27, 27, 86);
+}
+
+.member-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-page-title-btn-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

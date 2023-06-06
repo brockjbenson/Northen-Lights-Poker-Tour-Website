@@ -16,8 +16,31 @@ export default function MembersPage() {
     <>
       <div className="member-page-container">
         <Nav />
+        <div className="member-page-top">
+          <div className="member-page-title-container">
+            <header className="member-page-header">
+              <h1 className="member-page-title text-blue-950">
+                Meet our members
+              </h1>
+            </header>
+            <div className="member-page-info">
+              <p className="text-2xl pt-10">
+                Here at the Northern Lights Poker Tour, our members are our
+                driving force. Without the continued support show from them,
+                this group would not be no more. We currently have 11 active
+                members and are always looking for more individuals that not
+                only love poker, but love creating and strengthening bonds and
+                relationships with the membership.
+              </p>
+              <div className="member-page-title-btn-container">
+                <p className="text-2xl">Check out our great members below.</p>
+                <button className="member-page-title-btn">Members</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="members-section">
-          <header className="members-header">
+          <header className="members-list-header">
             <h1>Our Members</h1>
           </header>
           <div className="members-list">
@@ -30,13 +53,15 @@ export default function MembersPage() {
                     alt="member-headshot"
                   />
                   <div className="member-info">
-                    <header className="member-name">
-                      <li>{member.name}</li>
+                    <header className="member-info-header">
+                      <li className="member-name">{member.name}</li>
+                      <li className="member-type">{member.member_type}</li>
                     </header>
-                    <li>
-                      {member.birthday} Age {member.age}
-                    </li>
-                    <li>Birthplace {member.birthplace}</li>
+                    <div className="member-info-body">
+                      <li>Age: {member.age}</li>
+                      <li>DOB: {member.birthday}</li>
+                      <li>Birthplace: {member.birthplace}</li>
+                    </div>
                   </div>
                 </ul>
               );
