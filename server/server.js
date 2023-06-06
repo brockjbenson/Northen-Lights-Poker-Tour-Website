@@ -5,22 +5,18 @@ require("dotenv").config();
 const app = express();
 
 const sessionMiddleware = require("./modules/session-middleware");
-const passport = require("./strategies/user.strategy");
-
-// Route includes
 
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Passport Session Configuration //
 app.use(sessionMiddleware);
 
-// start up passport sessions
-app.use(passport.initialize());
-app.use(passport.session());
+// Routers
+
+const membersRouter = require("./routes/members.rotuer");
 
 /* Routes */
+app.use("/members", membersRouter);
 
 // Serve static files
 app.use(express.static("build"));

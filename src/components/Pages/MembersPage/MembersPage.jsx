@@ -1,10 +1,16 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Nav from "../../Shared/Nav/Nav";
 import "../MembersPage/MembersPage.css";
+import { useEffect } from "react";
 
 export default function MembersPage() {
-  const members = useSelector((store) => store.membersReducer.memberInfo);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch({ type: "FETCH_MEMBERS" });
+  }, []);
+
+  const members = useSelector((store) => store.membersReducer.memberInfo);
   console.log(members);
   return (
     <>
@@ -17,11 +23,16 @@ export default function MembersPage() {
           <div className="members-list">
             {members.map((member, id) => {
               return (
-                <ul key={id}>
-                  <header className="member-name">
-                    <li>{member.name}</li>
-                  </header>
+                <ul className="member" key={id}>
+                  <img
+                    className="member-headshot"
+                    src={member.headshot}
+                    alt="member-headshot"
+                  />
                   <div className="member-info">
+                    <header className="member-name">
+                      <li>{member.name}</li>
+                    </header>
                     <li>
                       {member.birthday} Age {member.age}
                     </li>

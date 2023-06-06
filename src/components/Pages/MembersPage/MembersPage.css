@@ -20,12 +20,24 @@
   flex-wrap: wrap;
 }
 
-.members-list ul {
+.member-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.members-list ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 30%;
   height: 20rem;
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0px 3px 7px 4px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 3px 7px 4px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 3px 7px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 5%;
   margin-block: 1rem;
 }
 
@@ -37,4 +49,10 @@
 .member-name li {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.member-headshot {
+  border-radius: 5%;
+  width: 10rem;
+  height: 10rem;
 }
