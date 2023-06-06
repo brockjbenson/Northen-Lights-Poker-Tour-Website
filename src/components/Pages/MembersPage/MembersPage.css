@@ -1,18 +1,18 @@
 .member-page-container {
-  background: url("/public/images/home-bg.png");
   height: 100svh;
 }
 
 .member-page-top {
   width: 100vw;
-  padding-bottom: 15rem;
+  height: 100vh;
+  background: url("/public/images/home-bg.png");
 }
 
 .members-list-header {
   margin-inline: auto;
   display: flex;
   justify-content: center;
-  margin-block: 2rem;
+  padding-block: 3rem;
 }
 
 .members-list-header h1 {
@@ -96,11 +96,26 @@
   margin-top: 1.5rem;
   font-size: 1.25rem;
   font-weight: bold;
+  border: 2px solid rgb(27, 27, 86);
   border-radius: 2rem;
   padding-block: 0.5rem;
-  color: white;
+  color: rgb(27, 27, 86);
   margin-inline: auto;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+.member-page-title-btn:hover {
+  scale: 105%;
+  -webkit-box-shadow: 0px 6px 7px -3px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 6px 7px -3px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 6px 7px -3px rgba(0, 0, 0, 0.41);
   background-color: rgb(27, 27, 86);
+  color: white;
+}
+
+.member-page-title-btn:active {
+  scale: 95%;
 }
 
 .member-page-header {
@@ -115,4 +130,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.members-section {
+  width: 100vw;
+  background-color: #ebfaff;
 }

@@ -1,22 +1,27 @@
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "../../Shared/Nav/Nav";
 import "../MembersPage/MembersPage.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function MembersPage() {
   const dispatch = useDispatch();
+  const membersList = useRef(null);
 
   useEffect(() => {
     dispatch({ type: "FETCH_MEMBERS" });
   }, []);
+
+  const handleMemberScroll = () => {
+    membersList.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const members = useSelector((store) => store.membersReducer.memberInfo);
   console.log(members);
   return (
     <>
       <div className="member-page-container">
-        <Nav />
         <div className="member-page-top">
+          <Nav />
           <div className="member-page-title-container">
             <header className="member-page-header">
               <h1 className="member-page-title text-blue-950">
@@ -34,12 +39,17 @@ export default function MembersPage() {
               </p>
               <div className="member-page-title-btn-container">
                 <p className="text-2xl">Check out our great members below.</p>
-                <button className="member-page-title-btn">Members</button>
+                <button
+                  className="member-page-title-btn"
+                  onClick={handleMemberScroll}
+                >
+                  Members
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="members-section">
+        <div ref={membersList} className="members-section">
           <header className="members-list-header">
             <h1>Our Members</h1>
           </header>
