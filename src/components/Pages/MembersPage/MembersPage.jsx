@@ -72,6 +72,7 @@ export default function MembersPage() {
                       <li>DOB: {member.birthday}</li>
                       <li>Birthplace: {member.birthplace}</li>
                     </div>
+                    <button className="member-info-button">More Info</button>
                   </div>
                 </ul>
               );

@@ -33,28 +33,19 @@
 .member-info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
+  height: 15rem;
 }
 
 .member {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 30rem;
+  width: 40%;
   height: 20rem;
-  background-color: rgba(255, 255, 255, 0.25);
-  -webkit-box-shadow: 0px 3px 7px 4px rgba(0, 0, 0, 0.09);
-  -moz-box-shadow: 0px 3px 7px 4px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 3px 7px 4px rgba(0, 0, 0, 0.09);
-  border-radius: 5%;
   margin-block: 2rem;
   transition: 0.2s;
-}
-
-.member:hover {
-  cursor: pointer;
-  scale: 105%;
 }
 
 .member-info-header {
@@ -68,6 +59,7 @@
   font-weight: bold;
   font-size: 1rem;
   font-style: italic;
+  margin-top: 0.5rem;
 }
 
 .member-name {
@@ -81,9 +73,8 @@
 }
 
 .member-headshot {
-  border-radius: 5%;
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .member-page-title {
@@ -141,4 +132,33 @@
 .members-section {
   width: 100vw;
   background-color: #ebfaff;
+}
+
+.member-info-button {
+  font-size: 1rem;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  background-color: rgb(27, 27, 86);
+  transition: 0.2s;
+}
+
+.member-info-button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid rgb(27, 27, 86);
+  color: rgb(27, 27, 86);
+  scale: 105%;
+}
+
+.member-info-button:active {
+  scale: 95%;
+}
+
+.member-info-body {
+  margin-bottom: 0.5rem;
 }
